@@ -2,6 +2,13 @@
 @import url(//necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
 body *,
 body *::before,
 body *::after {
@@ -16,7 +23,7 @@ body {
   font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-size: 1.4rem;
   color: #181818;
-  background: #fff;
+  background: #ccc;
 }
 /* 링크 스타일 */
 a {
@@ -54,7 +61,7 @@ body {
 
 /* 헤더 */
 .header {
-  background: yellow;
+  background: #fff;
   position: relative;
   border-radius: 0 0 15px 15px;
   padding: 0 30px;
@@ -81,8 +88,95 @@ body {
 }
 .member a {
   display: inline-block;
-  background-color: pink;
   padding: 6px 0;
+}
+
+/* 네비게이션 */
+.navigation {
+  padding-bottom: 35px;
+}
+.menu {
+  background: linear-gradient(
+    to bottom,
+    #b27b23 0%,
+    #e26b2b 35%,
+    #e26b2b 70%,
+    #e26b2b 100%
+  );
+  border-top: 2px solid currentColor;
+  margin: 10px 0 0 0;
+  list-style: none;
+  background-color: orange;
+  height: 47px;
+  border-radius: 0 0 5px 5px;
+  padding-left: 225px;
+}
+.menu-item {
+  position: relative;
+  float: left;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+.menu-button {
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 45px;
+  padding: 0 20px;
+  border: 0;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+.menu-act .menu-button {
+  color: #ff0;
+}
+.menu-act .menu-button::after {
+  content: '';
+  border-top: 2px solid #000;
+  display: block;
+}
+.sub-menu {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  position: absolute;
+  top: 47px;
+  display: none;
+  /* 부모 요소에서 줄바꿈 금지*/
+  white-space: nowrap;
+}
+.sub-menu li,
+.sub-menu a {
+  display: inline-block;
+}
+.sub-menu a {
+  padding: 8px 0;
+  margin-right: 10px;
+}
+.sub-menu a::before {
+  content: '\f192';
+  font-family: 'fontello';
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+}
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
+  content: '\e800';
+}
+.menu-act .sub-menu {
+  display: block;
+}
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  right: 0;
 }
 
 .visual {
