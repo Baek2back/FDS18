@@ -2,12 +2,15 @@
 @import url(//necolas.github.io/normalize.css/8.0.1/normalize.css);
 @import url(./fontello.css);
 
-.a11y-hidden {
+.a11y-hidden,
+legend {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
 }
 body *,
 body *::before,
@@ -272,8 +275,10 @@ body {
   margin: 0 15px;
 }
 .group1 {
+  padding: 10px;
   width: 250px;
 }
+
 .group2 {
   width: 380px;
 }
