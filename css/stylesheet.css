@@ -371,15 +371,8 @@ a {
   overflow: hidden;
   background-color: skyblue;
 }
-.odd,
-.even {
-  overflow: hidden;
-  background-color: skyblue;
-}
+
 .term-list > div:nth-child(2n) {
-  margin-top: 15px;
-}
-.even {
   margin-top: 15px;
 }
 
@@ -416,33 +409,65 @@ a {
   margin-left: 0;
 }
 
-/* .term-list-subject {
-  color: #296897;
-  display: inline-block;
-}
-.odd {
-  margin-bottom: 10px;
-  height: 75px;
-}
-.odd::after {
-  content: '';
-  clear: both;
-}
-.odd .term-list-thumbnail {
-  float: left;
+/* .search-form > fieldset {
   margin: 0;
+  padding: 10px 10px 5px 10px;
+  background: red;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  border-radius: 10px 10px 0 0;
+  border: none;
 }
-.term-list-brief {
-  margin: 0;
+.search-form input {
+  width: 200px;
+  height: 25px;
+  border: none;
+  padding-left: 5px;
 }
-.even {
-  overflow: auto;
-}
-.even .term-list-thumbnail {
-  float: right;
-  margin: 0;
+.search-form .btn-search {
+  width: 60px;
+  height: 25px;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  padding: 1px;
 } */
 
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-bottom-color: #fff;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+.search-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.search-form-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-form [name='search'] {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 1px 1px 1px 0.5em;
+  width: 190px;
+  height: 22px;
+  /* margin: 0 5px; */
+}
+.search-form .btn-search {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #aaa;
+  height: 22px;
+  padding: 0 10px;
+}
 .slogan {
   background: orange;
 }
