@@ -463,6 +463,150 @@ a {
   height: 22px;
   padding: 0 10px;
 }
+
+/* 탭 UI */
+.board {
+  background: yellow;
+  position: relative;
+  height: 200px;
+  margin-top: 20px;
+}
+.notice-list,
+.notice-more,
+.pds-list,
+.pds-more {
+  display: none;
+}
+.is-active .notice-list,
+.is-active .notice-more,
+.is-active .pds-list,
+.is-active .pds-more {
+  display: block;
+  overflow: auto;
+}
+
+.tab {
+  float: left;
+  margin: 0;
+}
+.tab a {
+  display: block;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #aaa;
+  background: #ccc linear-gradient(#ccc, #eee);
+  color: #999;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.is-active .tab a {
+  color: #ed702d;
+  border-color: #ed702d #ed702d #fff #ed702d;
+  background: #fff;
+}
+
+.notice-list,
+.pds-list {
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  background: skyblue;
+  position: absolute;
+  left: 0;
+  top: 45px;
+}
+
+.notice-list li,
+.pds-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 10px;
+}
+
+.notice-list a,
+.pds-liat a {
+  /* flex-grow: 1; */
+  width: 280px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.notice-more,
+.pds-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+  background: pink;
+}
+.notice-more::before,
+.pds-more::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+
+/* .board {
+  position: relative;
+  background: yellow;
+  margin-top: 40px;
+}
+.board h2 {
+  margin: 0;
+}
+.board h2 > a {
+  padding: 10px;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  color: #ccc;
+  background: #eee;
+}
+.board .is-active h2 > a {
+  background: #fff;
+  border: 2px solid orange;
+  border-bottom: none;
+  color: orange;
+}
+.board ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.board ul,
+.board ul + a {
+  display: none;
+}
+.board .is-active > ul,
+.board .is-active > ul + a {
+  display: block;
+}
+
+.board .is-active > ul a {
+  display: inline-block;
+  width: 280px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+.board .is-active > ul > li > time {
+  float: right;
+}
+
+.board .is-active > ul + a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.pds-heading {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+} */
+
 .slogan {
   background: orange;
 }
