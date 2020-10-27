@@ -466,9 +466,8 @@ a {
 
 /* 탭 UI */
 .board {
-  background: yellow;
   position: relative;
-  height: 200px;
+  min-height: 200px;
   margin-top: 20px;
 }
 .notice-list,
@@ -486,8 +485,16 @@ a {
 }
 
 .tab {
-  float: left;
+  /* float: left; */
   margin: 0;
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 83px;
 }
 .tab a {
   display: block;
@@ -495,11 +502,13 @@ a {
   border: 1px solid #aaa;
   background: #ccc linear-gradient(#ccc, #eee);
   color: #999;
-  padding: 5px 10px;
+  padding: 5px 15px;
   font-size: 1.4rem;
   font-weight: 400;
 }
-
+.is-active .tab {
+  z-index: 2;
+}
 .is-active .tab a {
   color: #ed702d;
   border-color: #ed702d #ed702d #fff #ed702d;
@@ -512,10 +521,11 @@ a {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  background: skyblue;
-  position: absolute;
+  padding-top: 45px;
+  min-height: 170px;
+  /* position: absolute;
   left: 0;
-  top: 45px;
+  top: 45px; */
 }
 
 .notice-list li,
