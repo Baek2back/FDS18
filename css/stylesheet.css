@@ -364,12 +364,10 @@ a {
 }
 
 .term-list {
-  background: yellow;
   margin: 15px 0 0 0;
 }
 .term-list > div:nth-child(n) {
   overflow: hidden;
-  background-color: skyblue;
 }
 
 .term-list > div:nth-child(2n) {
@@ -378,7 +376,6 @@ a {
 
 .term-list-subject,
 .term-list-brief {
-  background: pink;
   float: right;
   width: 145px;
 }
@@ -386,13 +383,11 @@ a {
   color: #296897;
 }
 .term-list-brief {
-  background: orange;
   margin-top: 5px;
   line-height: 1.5;
 }
 .term-list-thumbnail {
   float: left;
-  background: lime;
 }
 .term-list-thumbnail img {
   display: block;
