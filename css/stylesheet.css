@@ -682,6 +682,71 @@ a {
 .news-more::before {
   color: hsla(110, 50%, 30%, 1);
 }
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-box {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+.event-heading,
+.related-heading {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.point-color {
+  color: #ed702d;
+}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+.event-brief {
+  line-height: 1.5;
+}
+.event-brief em {
+  font-style: normal;
+}
+.event {
+  position: relative;
+}
+.btn-event {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-prev,
+.btn-next {
+  width: 19px;
+  height: 18px;
+  overflow: hidden;
+  background: transparent no-repeat url('./images/back_forward.png') 0 0;
+  padding: 18px 0 0 0;
+  border: 0;
+}
+.btn-next {
+  background-position: -36px 0;
+}
+/* .btn-event {
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
+/* .btn-prev,
+.btn-next {
+  width: 19px;
+  height: 18px;
+  font-size: 0;
+  padding: 0;
+  border: 0;
+  background: transparent no-repeat url('./images/back_forward.png');
+  overflow: hidden;
+}
+.btn-next {
+  transform: scaleX(-1);
+} */
 
 .slogan {
   background: orange;
