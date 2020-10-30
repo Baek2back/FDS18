@@ -690,7 +690,8 @@ a {
   background: #ccc linear-gradient(to bottom, #ccc, #eee);
 }
 .event-heading,
-.related-heading {
+.related-heading,
+.favorite-heading {
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
@@ -711,6 +712,7 @@ a {
 }
 .event {
   position: relative;
+  border-bottom: 1px solid #aaa;
 }
 .btn-event {
   position: absolute;
@@ -728,6 +730,32 @@ a {
 }
 .btn-next {
   background-position: -36px 0;
+}
+.related {
+  padding: 10px 0 0 0;
+}
+.related-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0 0;
+  background: #fff;
+  height: 27px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.related-list li {
+  padding: 2px 5px 3px 5px;
+}
+.related-list a {
+  display: block;
+  line-height: 20px;
+  padding-left: 20px;
+}
+.related-list:hover {
+  height: 147px;
+  padding: 10px 0;
 }
 /* .btn-event {
   position: absolute;
@@ -748,6 +776,93 @@ a {
   transform: scaleX(-1);
 } */
 
+/* ol {
+  list-style: none; 
+  counter-reset: li
+}
+li::before {
+  content: counter(li); 
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block; 
+  width: 1em;
+  background: #aaa;
+}
+li {
+  counter-increment: li;
+}
+a {
+  padding-left: 10px;
+} */
+
+/* 인기 사이트 */
+.favorite {
+  margin-top: 20px;
+  position: relative;
+}
+.favorite-list {
+  margin: 10px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+.favorite-list li {
+  margin-top: 8px;
+  counter-increment: favorite-list;
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+.favorite-list li::before {
+  position: absolute;
+  left: 0;
+  content: counter(favorite-list);
+  color: #fff;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 2px 5px;
+  margin-right: 5px;
+  background: #999;
+  border-radius: 2px;
+}
+.favorite-list a {
+  display: block;
+  /* flex-grow: 1; */
+  margin: 0 10px 0 20px;
+}
+.up,
+.stop,
+.down {
+  font-style: normal;
+  width: 9px;
+  height: 0;
+  padding-top: 11px;
+  overflow: hidden;
+  background: no-repeat url('./images/rank.png');
+  position: absolute;
+  margin-top: -5px;
+  top: 50%;
+  right: 0;
+}
+
+.up {
+  background-position: 0 0;
+}
+.down {
+  background-position: 0 100%;
+}
+.stop {
+  background-position: 0 50%;
+}
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
+.favorite-more::before {
+  color: hsla(110, 50%, 30%, 1);
+}
 .slogan {
   background: orange;
 }
